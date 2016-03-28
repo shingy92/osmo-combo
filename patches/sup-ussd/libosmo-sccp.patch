@@ -1,0 +1,25 @@
+diff --git a/Makefile.am b/Makefile.am
+index 534fdc2..0409cd9 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1,7 +1,7 @@
+ AUTOMAKE_OPTIONS = foreign dist-bzip2 1.6
+ 
+ AM_CPPFLAGS = $(all_includes) -I$(top_srcdir)/include
+-SUBDIRS = include src tests
++SUBDIRS = include src
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = libosmo-sccp.pc libosmo-mtp.pc
+diff --git a/git-version-gen b/git-version-gen
+index 8e59c5a..7a2ed1e 100755
+--- a/git-version-gen
++++ b/git-version-gen
+@@ -98,6 +98,7 @@ elif test -d ./.git \
+     && case $v in
+ 	 [0-9]*) ;;
+ 	 v[0-9]*) ;;
++	 fairwaves/[0-9]*) v=`echo "$v" | sed 's|fairwaves/||'` ;;
+ 	 *) (exit 1) ;;
+        esac
+ then

@@ -9,8 +9,8 @@ CONF_VARS=CFLAGS="-g -O0" LDFLAGS="-g -O0"
 .PHONY: pre  all clean_marks libosmocore libosmo-abis libosmo-netif libosmo-sccp libsmpp34 openbsc osmo-pcu openggsn osmo-gtp-kernel osmo-bts
 #osmo-trx
 
-all: libosmocore libosmo-abis libosmo-netif libosmo-sccp libsmpp34 openbsc osmo-pcu openggsn osmo-gtp-kernel osmo-bts
-#osmo-trx
+all: libosmocore libosmo-abis libosmo-netif libosmo-sccp libsmpp34 openbsc
+#osmo-trx osmo-pcu openggsn osmo-gtp-kernel osmo-bts
 
 pre:
 	@mkdir -p $(BUILD_DIR)
@@ -191,7 +191,8 @@ $(BUILD_DIR)/openggsn.configured: openggsn/configure.ac
 ###################################################################
 # openbsc
 
-openbsc: libosmocore libosmo-abis libosmo-netif libsmpp34 osmo-gtp-kernel  $(BUILD_DIR)/openbsc.installed
+openbsc: libosmocore libosmo-abis libosmo-netif libsmpp34 $(BUILD_DIR)/openbsc.installed
+# osmo-gtp-kernel 
 
 $(BUILD_DIR)/openbsc.installed: $(BUILD_DIR)/openbsc.made
 	$(MAKE_INSTALL) -C $(BUILD_DIR)/openbsc

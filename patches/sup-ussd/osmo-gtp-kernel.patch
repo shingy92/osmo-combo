@@ -1,0 +1,29 @@
+diff --git a/gtp.c b/gtp.c
+index cbe2da1..50bd6dd 100644
+--- a/gtp.c
++++ b/gtp.c
+@@ -726,8 +726,9 @@ static const struct net_device_ops gtp_netdev_ops = {
+ 
+ static void gtp_link_setup(struct net_device *dev)
+ {
++#ifdef IFF_NO_QUEUE
+ 	dev->priv_flags		|= IFF_NO_QUEUE;
+-
++#endif
+ 	dev->netdev_ops		= &gtp_netdev_ops;
+ 	dev->destructor		= free_netdev;
+ }
+diff --git a/libgtnl/configure.ac b/libgtnl/configure.ac
+index a9845ac..1a02959 100644
+--- a/libgtnl/configure.ac
++++ b/libgtnl/configure.ac
+@@ -17,7 +17,8 @@ AC_PROG_CC
+ AM_PROG_CC_C_O
+ AC_EXEEXT
+ AC_DISABLE_STATIC
+-LT_INIT
++LT_INIT([disable-shared])
++
+ CHECK_GCC_FVISIBILITY
+ case "$host" in
+ *-*-linux* | *-*-uclinux*) ;;

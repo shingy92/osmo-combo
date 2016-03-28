@@ -1,0 +1,12 @@
+diff --git a/configure.ac b/configure.ac
+index 071c376..ec35374 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -14,6 +14,7 @@ AC_PROG_MAKE_SET
+ AC_PROG_CC
+ AC_PROG_INSTALL
+ AC_PROG_RANLIB
++LT_INIT([disable-shared])
+ 
+ dnl checks for header files
+ AC_HEADER_STDC

@@ -1,0 +1,15 @@
+diff --git a/configure.ac b/configure.ac
+index 6d5b3b3..d7cc18a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -10,7 +10,9 @@ AM_CONFIG_HEADER([aux_config/config.h])
+ # Checks for programs.
+ AC_PROG_CC
+ AM_PROG_CC_C_O
+-AC_PROG_LIBTOOL
++
++LT_INIT([disable-shared])
++#AC_PROG_LIBTOOL
+ AC_PROG_INSTALL
+ 
+ # Checks for libraries.

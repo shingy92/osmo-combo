@@ -1,0 +1,25 @@
+diff --git a/configure.ac b/configure.ac
+index 7d88eb4..59b16c2 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -12,7 +12,7 @@ dnl checks for programs
+ AC_PROG_MAKE_SET
+ AC_PROG_CC
+ AC_PROG_INSTALL
+-LT_INIT([pic-only])
++LT_INIT([disable-shared])
+ 
+ AC_CONFIG_MACRO_DIR([m4])
+ 
+diff --git a/git-version-gen b/git-version-gen
+index 42cf3d2..9a3c43d 100755
+--- a/git-version-gen
++++ b/git-version-gen
+@@ -83,6 +83,7 @@ then
+     case $v in
+ 	*$nl*) v= ;; # reject multi-line output
+ 	[0-9]*) ;;
++	fairwaves/[0-9]*) v=`echo "$v" | sed 's|fairwaves/||'` ;;
+ 	*) v= ;;
+     esac
+     test -z "$v" \

@@ -1,0 +1,25 @@
+diff --git a/configure.ac b/configure.ac
+index acd153d..ea7e9fb 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -13,7 +13,7 @@ AC_PROG_MAKE_SET
+ AC_PROG_MKDIR_P
+ AC_PROG_CC
+ AC_PROG_INSTALL
+-LT_INIT([pic-only])
++LT_INIT([disable-shared])
+ 
+ AC_CONFIG_MACRO_DIR([m4])
+ 
+diff --git a/git-version-gen b/git-version-gen
+index 42cf3d2..edda463 100755
+--- a/git-version-gen
++++ b/git-version-gen
+@@ -98,6 +98,7 @@ elif
+     && case $v in
+ 	 [0-9]*) ;;
+ 	 v[0-9]*) ;;
++	 fairwaves/[0-9]*) v=`echo "$v" | sed 's|fairwaves/||'` ;;
+ 	 *) (exit 1) ;;
+        esac
+ then

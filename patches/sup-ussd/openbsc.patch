@@ -1,0 +1,12 @@
+diff --git a/openbsc/configure.ac b/openbsc/configure.ac
+index bdf028a..47455ff 100644
+--- a/openbsc/configure.ac
++++ b/openbsc/configure.ac
+@@ -14,6 +14,7 @@ AC_PROG_MAKE_SET
+ AC_PROG_CC
+ AC_PROG_INSTALL
+ AC_PROG_RANLIB
++LT_INIT([disable-shared])
+ 
+ dnl checks for libraries
+ AC_SEARCH_LIBS(crypt, crypt,
