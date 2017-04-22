@@ -1,33 +1,33 @@
 [submodule "libosmo-abis"]
 	path = libosmo-abis
-	url = git://git.osmocom.org/libosmo-abis.git
+	url = https://git.osmocom.org/libosmo-abis.git
 [submodule "libosmo-netif"]
 	path = libosmo-netif
-	url = git://git.osmocom.org/libosmo-netif.git
+	url = https://git.osmocom.org/libosmo-netif.git
 [submodule "libosmo-sccp"]
 	path = libosmo-sccp
-	url = git://git.osmocom.org/libosmo-sccp.git
+	url = https://git.osmocom.org/libosmo-sccp.git
 [submodule "libosmocore"]
 	path = libosmocore
-	url = git://git.osmocom.org/libosmocore.git
+	url = https://git.osmocom.org/libosmocore.git
 [submodule "libsmpp34"]
 	path = libsmpp34
-	url = git://git.osmocom.org/libsmpp34.git
+	url = https://git.osmocom.org/libsmpp34.git
 [submodule "openbsc"]
 	path = openbsc
-	url = git://git.osmocom.org/openbsc.git
+	url = https://git.osmocom.org/openbsc.git
 [submodule "osmo-bts"]
 	path = osmo-bts
-	url = git://git.osmocom.org/osmo-bts.git
+	url = https://git.osmocom.org/osmo-bts.git
 [submodule "osmo-trx"]
 	path = osmo-trx
-	url = git://git.osmocom.org/osmo-trx.git
+	url = https://git.osmocom.org/osmo-trx.git
 [submodule "osmo-pcu"]
 	path = osmo-pcu
-	url = git://git.osmocom.org/osmo-pcu.git
+	url = https://git.osmocom.org/osmo-pcu.git
 [submodule "openggsn"]
 	path = openggsn
-	url = git://git.osmocom.org/openggsn.git
+	url = https://git.osmocom.org/openggsn.git
 [submodule "osmo-gtp-kernel"]
 	path = osmo-gtp-kernel
-	url = git://git.osmocom.org/osmo-gtp-kernel.git
+	url = https://git.osmocom.org/osmo-gtp-kernel.git
